@@ -1,0 +1,58 @@
+.job-list-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.job-list {
+    list-style: none;
+    padding: 0;
+}
+.job-info {
+    flex: 1; /* Make job info take up remaining space */
+}
+
+.apply-button-container {
+    display: flex;
+    justify-content: flex-end; /* Align apply button to the right */
+    align-items: center; /* Center vertically within the container */
+}
+
+.apply-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.job-item {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.job-title {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.job-description {
+    margin: 5px 0;
+}
+
+.job-type, .job-location, .job-company-id, .job-salary {
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+.job-salary {
+    color: #008000;
+}

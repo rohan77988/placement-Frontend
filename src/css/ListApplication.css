@@ -1,0 +1,52 @@
+/* ListAllApplications.css */
+
+/* Container styles */
+.list-applications-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* Heading styles */
+.list-applications-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* List styles */
+.applications-list {
+    list-style: none;
+    padding: 0;
+}
+
+.application-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* Application details styles */
+.application-details {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.application-details span {
+    font-weight: bold;
+}
+
+/* Loading styles */
+.loading-text {
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Error styles */
+.error-text {
+    color: red;
+    font-size: 18px;
+    margin-top: 20px;
+}
