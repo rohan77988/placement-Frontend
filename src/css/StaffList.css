@@ -1,0 +1,27 @@
+/* StaffList.css */
+
+.staff-list-container {
+    margin: 20px;
+}
+
+.staff-list {
+    list-style: none;
+    padding: 0;
+}
+
+.staff-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.staff-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.staff-email {
+    color: #555;
+}
+
+/* Add more styles for other staff details as needed */

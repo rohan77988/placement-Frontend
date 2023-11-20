@@ -3,7 +3,7 @@ import axios from 'axios';
 import {toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
-import '../css/UpdateCompany.css';
+import '../../css/UpdateCompany.css';
 
 
 const updateCompUrl = '/api/companies/';

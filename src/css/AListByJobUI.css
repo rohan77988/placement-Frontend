@@ -1,0 +1,23 @@
+/* ListApplicationsByJobUI.css */
+.list-applications-by-job-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.input-container {
+    margin-top: 10px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}

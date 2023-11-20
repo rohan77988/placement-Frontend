@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'; // Import Link from React Router
 import { toast, ToastContainer } from 'react-toastify';
-import '../css/JobList.css';
+import '../../css/JobList.css';
 
 const ListJobsUrl = '/api/job/';
-const ListAllJobs = () => {
+const ListJobs = () => {
     const [jobs, setJobs] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -60,4 +60,4 @@ const ListAllJobs = () => {
     );
 };
 
-export default ListAllJobs;
+export default ListJobs;

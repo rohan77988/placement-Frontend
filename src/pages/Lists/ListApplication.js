@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../css/ListApplication.css';
+import '../../css/ListApplication.css';
 import {toast, ToastContainer} from "react-toastify";
 
 const listAllUrl = "/api/applications/";
 
-const ListAllApplication = () => {
+const ListApplication = () => {
     const [applications, setApplications] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -65,4 +65,4 @@ const ListAllApplication = () => {
     );
 };
 
-export default ListAllApplication;
+export default ListApplication;

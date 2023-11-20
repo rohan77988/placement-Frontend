@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {Button} from "@mui/material";
 
 const landingPageStyle = {
     display: 'flex',
@@ -18,6 +19,9 @@ function LandingPage() {
                 <Link to="/admin">Admin</Link>
                 <span style={{ margin: '0 10px' }}>|</span>
                 <Link to="/students">Students</Link>
+                <Button component={Link} to="/login" variant="contained" color="primary">
+                    Login
+                </Button>
             </div>
         </div>
     );

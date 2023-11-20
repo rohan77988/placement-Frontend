@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../css/StudentList.css'; // Import the CSS file for styling
+import '../../css/StudentList.css'; // Import the CSS file for styling
 
-const ListAllStudents = () => {
+const ListStudents = () => {
     const [students, setStudents] = useState([]);
     const listAllStudentUrl = '/api/students/';
     useEffect(() => {
@@ -29,7 +29,7 @@ const ListAllStudents = () => {
                     <tr key={index}>
                         <td>{student.firstName}</td>
                         <td>{student.lastName}</td>
-                        <td>{student.company}</td>
+                        <td>{Array.from(new Set(student.offeredJobs.map(offer => offer.company.name))).join(", ")}</td>
                         {/* Add more table cells as needed */}
                     </tr>
                 ))}
@@ -39,4 +39,4 @@ const ListAllStudents = () => {
     );
 };
 
-export default ListAllStudents;
+export default ListStudents;

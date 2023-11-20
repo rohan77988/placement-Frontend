@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import {toast, ToastContainer} from 'react-toastify';
 import {useNavigate, useParams} from 'react-router-dom';
-import '../css/Application.css';
+import '../../css/Application.css';
 
 
 const applyUrl = '/api/applications/';
@@ -23,7 +23,7 @@ const navigate = useNavigate();
             .then((response) => {
                 // Handle a successful application submission
                 toast.success('Application submitted successfully');
-                navigate('/admin');
+                navigate('/listallapplication');
             })
             .catch((error) => {
                 // Handle error cases here (e.g., validation errors)

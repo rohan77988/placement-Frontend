@@ -1,39 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
-import "../css/CompanyList.css";
+import 'react-toastify/dist/ReactToastify.css';
+import '../../css/StaffList.css';
 
-const ListCompaniesUrl = '/api/companies/';
+const ListStaffUrl = '/api/staffs/';
 
-const ListAllCompanies = () => {
-    const [companies, setCompanies] = useState([]);
+const ListAllStaff = () => {
+    const [staffList, setStaffList] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get(ListCompaniesUrl)
+        // Fetch the list of all staff members from your API
+        axios.get(ListStaffUrl)
             .then((response) => {
-                setCompanies(response.data);
+                setStaffList(response.data);
                 setLoading(false);
             })
             .catch((error) => {
-                toast.error('Error fetching companies:', error);
+                toast.error('Error fetching staff members:', error);
                 setLoading(false);
             });
     }, []);
 
     return (
-        <div>
-            <h2>List of All Companies</h2>
+        <div className="staff-list-container">
+            <h2>List of All Staff Members</h2>
             {loading ? (
                 <p>Loading...</p>
             ) : (
-                <ul>
-                    {companies.map((company) => (
-                        <li key={company.id}>
-                            <h3>{company.name}</h3>
-                            <p>ARN: {company.arn}</p>
-                            <p>Description: {company.description}</p>
-                            <p>Website: <a href={company.websiteLink} target="_blank" rel="noreferrer">{company.websiteLink}</a></p>
+                <ul className="staff-list">
+                    {staffList.map((staff) => (
+                        <li key={staff.id} className="staff-item">
+                            <h3 className="staff-name">{staff.firstName} {staff.lastName}</h3>
+                            <p className="staff-email">Email: {staff.email}</p>
+                            {/* Add other staff details */}
                         </li>
                     ))}
                 </ul>
@@ -53,4 +54,4 @@ const ListAllCompanies = () => {
     );
 };
 
-export default ListAllCompanies;
+export default ListAllStaff;
