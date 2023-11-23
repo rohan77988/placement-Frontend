@@ -6,7 +6,18 @@
     margin: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
+.loading-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 18px;
+    transform: translate(-50%, -50%);
+    background-color: #FDFDFD; /* Adjust the transparency here */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
 .job-list {
     list-style: none;
     padding: 0;

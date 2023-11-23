@@ -68,7 +68,7 @@ function Admin() {
             <h3>&nbsp; Applications</h3>
             <ul>
                 <li>
-                    <Link to="/admin/listallapplication">All Applications</Link>
+                    <Link to="/listallapplication">All Applications</Link>
                 </li>
                 <li>
                     <Link to="/admin/listallapplication/jobUI">Application by Job</Link>

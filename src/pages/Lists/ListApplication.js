@@ -1,38 +1,51 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Modal from 'react-modal';
 import '../../css/ListApplication.css';
-import {toast, ToastContainer} from "react-toastify";
+import { toast, ToastContainer } from 'react-toastify';
 
 const listAllUrl = "/api/applications/";
 
 const ListApplication = () => {
     const [applications, setApplications] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
     const fetchAllApplications = () => {
-        // Fetch all applications from your API
+        openModal();
         axios.get(listAllUrl)
             .then((response) => {
                 setApplications(response.data);
                 setLoading(false);
+                closeModal();
             })
             .catch((error) => {
                 toast.error('Error fetching applications:', error);
                 setLoading(false);
+                closeModal();
             });
     };
 
     useEffect(() => {
-        // Fetch all applications by default
         fetchAllApplications();
     }, []);
 
     return (
         <div>
             <h2>List of Applications</h2>
-            {loading ? (
+            <Modal
+                isOpen={isModalOpen}
+                onRequestClose={closeModal}
+                contentLabel="Loading Modal"
+                className="loading-modal" // Apply the custom class
+                overlayClassName="loading-overlay" // Apply the overlay class
+            >
                 <p>Loading...</p>
-            ) : (
+            </Modal>
+            {!loading ? (
                 <ul className="applications-list">
                     {applications.map((application) => (
                         <li key={application.id} className="application-item">
@@ -49,7 +62,7 @@ const ListApplication = () => {
                         </li>
                     ))}
                 </ul>
-            )}
+            ) : null}
             <ToastContainer
                 position="top-right"
                 autoClose={2000}
