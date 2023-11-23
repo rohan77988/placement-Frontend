@@ -27,7 +27,7 @@ function RegisterStaff() {
                 // Check for a successful response (you can customize this based on your server's response)
                 if (response.status >= 200 && response.status < 300) {
                     // Redirect to the home page or show a success message
-                    navigate('/');
+                    navigate('/admin');
                 } else {
                     // Handle other cases here
                     toast.error('Login failed. Please check your credentials.');

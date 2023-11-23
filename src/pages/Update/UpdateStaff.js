@@ -37,7 +37,7 @@ const UpdateStaff = () => {
             .put(updateStaffUrl, [requestData])
             .then(() => {
                 toast.success('Staff updated successfully.');
-                navigate('/listallstaffs');
+                navigate('/admin/listallstaffs');
             })
             .catch((error) => {
                 toast.error(`Error updating staff: ${error.response.data.message}`);

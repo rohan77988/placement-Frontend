@@ -23,13 +23,13 @@ import DeleteApplication from "./pages/Delete/DeleteApplication";
 import ListStaff from "./pages/Lists/ListStaff";
 import ListApplicationByJob from "./pages/Lists/ListApplicationByJob";
 import ListApplicationsByJobUI from "./pages/Lists/ListApplicationsByJobUI";
-import { AuthPage } from "./pages/Auth/Login.tsx";
+import Login from "./pages/Auth/Login";
 
 function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/login" element={<AuthPage />} />
+                <Route path="/login" element={<Login />} />
 
 
                 <Route path="/" element={<LandingPage />} />
@@ -38,25 +38,25 @@ function App() {
                 <Route path="/admin/register-staff" element={<RegisterStaff />} />
                 <Route path="/admin/create-job" element={<CreateJob />} />
                 <Route path="/listallstudents" element={<ListStudents />} /> {/* Add this route */}
-                <Route path="/updatestudent" element={<UpdateStudent />} /> {/* Add this route */}
+                <Route path="/admin/updatestudent" element={<UpdateStudent />} /> {/* Add this route */}
                 <Route path="/students" element={<Students />} />
                 <Route path="/listalljobs" element={<ListJobs />} />
-                <Route path="/deletejob" element={<DeleteJob />} />
-                <Route path="/updatejob" element={<UpdateJob />} />
+                <Route path="/admin/deletejob" element={<DeleteJob />} />
+                <Route path="/admin/updatejob" element={<UpdateJob />} />
                 <Route path="/apply" element={<Apply />} />
                 <Route path="/listallapplication" element={<ListApplication />} />
-                <Route path="/listallapplication/job" element={<ListApplicationByJob />} />
-                <Route path="/listallapplication/jobUI" element={<ListApplicationsByJobUI />} />
+                <Route path="/admin/listallapplication/job" element={<ListApplicationByJob />} />
+                <Route path="/admin/listallapplication/jobUI" element={<ListApplicationsByJobUI />} />
 
-                <Route path="/deleteapplication" element={<DeleteApplication />} />
+                <Route path="/admin/deleteapplication" element={<DeleteApplication />} />
                 <Route path="/listallcompanies" element={<ListCompanies />} />
-                <Route path="/updateStatus" element={<UpdateStatus />} />
-                <Route path="/updateCompanyDetials" element={<UpdateCompany />} />
-                <Route path="/registerstaff" element={<RegisterStaff />} />
-                <Route path="/updatestaff" element={<UpdateStaff />} />
-                <Route path="/liststaff" element={<ListStaff />} />
-                <Route path="/registerCompany" element={<RegisterCompany />} />
-                <Route path="/registerstudent" element={<RegisterStudent />} />
+                <Route path="/admin/updateStatus" element={<UpdateStatus />} />
+                <Route path="/admin/updateCompanyDetials" element={<UpdateCompany />} />
+                <Route path="/admin/registerstaff" element={<RegisterStaff />} />
+                <Route path="/admin/updatestaff" element={<UpdateStaff />} />
+                <Route path="/admin/liststaff" element={<ListStaff />} />
+                <Route path="/admin/registerCompany" element={<RegisterCompany />} />
+                <Route path="/admin/registerstudent" element={<RegisterStudent />} />
 
                 {/* Add routes for other pages */}
             </Routes>

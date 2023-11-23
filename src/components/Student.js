@@ -16,9 +16,6 @@ function Students() {
                 <li>
                     <Link to="/listalljobs">List All Jobs</Link>
                 </li>
-                <li>
-                    <Link to="/listallapplication">List All Applications</Link>
-                </li>
             </ul>
             <h3>&nbsp; Apply</h3>
             <ul>
@@ -28,7 +25,9 @@ function Students() {
                 <li>
                     <Link to="/deleteapplication">Withdraw Application</Link>
                 </li>
-
+                <li>
+                    <Link to="/listallapplication">List All Applications</Link>
+                </li>
                 {/* Add other apply-related links */}
             </ul>
         </div>
